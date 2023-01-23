@@ -12,6 +12,7 @@ const MovieCard = ({movie}) => {
         <Card.Text>
             {movie.description}
         </Card.Text>
+        <h4>{movie.rating}</h4>
         <Button variant="primary" >Watch</Button>
       </Card.Body>
     </Card>
