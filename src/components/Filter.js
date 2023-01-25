@@ -5,18 +5,18 @@ const Filter = ({setMovies,movies}) => {
 
 const [backUp,setBackUp]=useState(movies.slice())
 
-  const searchMovieHandler =(movie)=>{  
-    movie=movie.target.value.toLowerCase();
-    if(movie){
-      for (let i= 0; i < movies.length; i++) {
-        if(movie===movies[i].title){
-        setMovies(movies.filter(elm=>elm.title===movie)) 
-            }
-      }   
-  }else{
-    setMovies(movies=backUp)
-  }
-   }
+const searchMovieHandler =(movie)=>{  
+  movie=movie.target.value.toLowerCase();
+  if(movie){
+    for (let i= 0; i < movies.length; i++) {
+      if(movie===movies[i].title){
+      setMovies(movies.filter(elm=>elm.title===movie)) 
+          }
+    }   
+}else{
+  setMovies(movies=backUp)
+}
+ }
 
    const handleRateIntervalBybutton= (getValue)=>{
     (getValue===1)?setMovies(movies.filter(elm=>elm.rating<=2.0&&elm.rating>=1.0))

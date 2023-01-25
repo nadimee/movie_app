@@ -12,9 +12,11 @@ const MovieList = ({setMovies,movies}) => {
     
    {
     
-    movies.map((movie,i)=><MovieCard movie={movie} key={i}></MovieCard>)
-   }
+    movies.map((movie,i)=><MovieCard setMovies={setMovies} movies={movies} movie={movie} key={i}></MovieCard>)
 
+    
+
+   }
     </div>
     </div>
   )

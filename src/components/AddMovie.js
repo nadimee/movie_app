@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const AddMovie = ({handleAdd}) => {
-
+  const navigate=useNavigate();
 const [inputs,setInputs] = useState({title:"",description:"",posterURL:"",rating:0.0})
 
 
@@ -9,7 +10,8 @@ const handleChange = (e)=>{
   setInputs({...inputs,[e.target.name]:e.target.value})
 }
 const addNewMovie = ()=>{
-  handleAdd(inputs)
+  navigate('/')
+ handleAdd(inputs)
 }
   return (
     <div style={{margin:'2%'}}>
